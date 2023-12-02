@@ -1,5 +1,6 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
+import babel from 'vite-plugin-babel';
 import mkcert from 'vite-plugin-mkcert'
 
 import path from 'path'
@@ -8,7 +9,8 @@ import path from 'path'
 export default defineConfig({
   plugins: [
     react(),
-    mkcert()
+    mkcert(),
+    babel()
   ],
 
   server: {
